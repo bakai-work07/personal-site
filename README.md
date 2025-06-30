@@ -2,7 +2,7 @@
 
 This is my personal website, built from scratch using HTML and CSS.
 
-I made this project to learn frontend layout and responsiveness properly, instead of just copying tutorials. The site includes a short personal intro, my current skillset, and a blog section where I’ll showcase projects and experiments over time.
+The site includes a short personal intro, my current skillset, and a blog section where I’ll showcase projects and experiments over time.
 
 It’s still a work in progress — I’ll continue refining the design, adding content, and learning as I go.
 
