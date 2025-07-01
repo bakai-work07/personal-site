@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Portfolio</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+     <nav>
+        <div class="left">
+            <a href="../index.html">Home</a>
+            <a href="../blog.html">
+                <span>Personal Blog</span>
+            </a>
+        </div>
+        <div class="right">
+            <a href="https://github.com/bakai-work07" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+                <span>Github</span>
+            </a>
+            <a href="https://www.linkedin.com/in/tanbangkai/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="mailto:bangkaiwork@gmail.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        </div>
+     </nav>
+     <main class="post">
+        <h1>Making a 2D Game in Java #1</h1>
+        <p class="post-date">July 2, 2025</p>
+        <p>I first met Java in school, and let’s just say it wasn’t love at first compile. 
+            Our prof was the kind of CS purist who treated design patterns like gospel and 
+            thought inheritance was some dangerous forbidden magic. I was strictly told never to use it, 
+            like it would summon demons from the JVM!</p>
+        <p>But today, I decided to give it another shot — not to write the next enterprise-grade framework, 
+            but to make something simple and visual. Something that moves. 
+            Something I can actually play. So I’m building a 2D game, and this time, I’m using Java to bring a little
+            sprite to life on my screen. </p>
+        <img src="/images/post1.webp" alt="picture of pixel art">
+        <h2>Making a sprite move</h2>
+        <p>The first milestone was simple: getting a sprite
+            to move around with arrow keys. I created a basic game loop using a JPanel, 
+            set up key listeners, and tracked the player’s X and Y position.
+            I started with a white rectangle, then I added my own custom sprite!
+        </p>
+        <video autoplay muted loop width="600">
+        <source src="/images/vid1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        <h2>Adding textures to the game</h2>
+        <p>Now that I had that going, I wanted to add actual textures to the background. I went to Piskel and whipped up some
+            custom textures, and added them to the game! At first, I only added grass, water, and stone — I didn't want to make
+            anything too fancy lol. The harder part was learning how to implement a tile system — it took me a lot of debugging,
+            and it was always some missing symbol or an accidental typo that caused the whole thing to go haywire. Eventually, I managed to do this:
+        </p>
+        <video autoplay muted loop width="600">
+        <source src="/images/vid2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        <h2>Implementing Collision</h2>
+        <p>With textures in place, I ran into my next challenge: walking through walls. Not very immersive. 
+            So I started implementing basic collision detection. I gave certain tiles a collision property, 
+            and added a hitbox to my sprite. Then, I checked for overlap before allowing movement in any direction.</p>
+        <p>This part was trickier than I thought. I wasn't careful with the sprite’s hitbox while I was making sure 
+            it was aligned with the tile grid properly. At one point, I kept colliding with invisible air — 
+            turns out I was rendering my player in the wrong area...  😭😭😭</p>
+        <video autoplay muted loop width="600">
+        <source src="/images/vid3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        <h2>What’s Next?</h2>
+        <p>Right now, I’ve got a little character moving around a basic tiled world, 
+            unable to walk through walls. And honestly, I’m proud of it. There’s still so much I want to learn — animation
+             frames, enemy AI, maybe even items and inventory systems. But for the first time, I’m enjoying writing Java.
+        </p>
+        <p class="last-paragraph">Let's see where this goes.</p>
+     </main>
+</body>
+</html>
