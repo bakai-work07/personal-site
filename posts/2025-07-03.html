@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/personal-site/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css?v=10">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Portfolio</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+     <nav>
+        <div class="left">
+            <a href="index.html">Home</a>
+            <a href="blog.html">
+                <span>Personal Blog</span>
+            </a>
+        </div>
+        <div class="right">
+            <a href="https://github.com/bakai-work07" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+                <span>Github</span>
+            </a>
+            <a href="https://www.linkedin.com/in/tanbangkai/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="mailto:bangkaiwork@gmail.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        </div>
+     </nav>
+     <main class="post">
+        <h1>Making a 2D Game in Java #2</h1>
+        <p class="post-date">July 3, 2025</p>
+        <p>Somehow, I didn’t stop. After getting the sprite moving and walls doing their job, 
+            I thought I’d take a break and maybe touch some grass lol. But instead, I opened good ol' Eclipse and asked myself: 
+            “What if I could pick things up? What if I could open doors? What if I could win?” 
+            And thus began Part 2 of this mildly chaotic game dev journey: object interaction, audio, 
+                and accidentally making a game that’s actually… kind of complete?</p>
+        <h2>Adding Interactable Objects</h2>
+        <p>The first object I added was a key. Very original, I know. I made a new class for game objects, 
+            gave the key a little sprite, and plopped it onto the map. Then I coded a simple check — 
+            if the player’s hitbox overlaps the key’s hitbox, hehe YOINK. The key disappears, and the player
+            "picks it up". That’s it. One item down! But the inventory system... still nonexistent. Baby steps.
+        </p>
+        <p>
+            Next, I made a door. Again, revolutionary stuff. The door checks if you have the key, and if you have it, 
+            it disappears. No sound yet, but it was still oddly satisfying to watch. 
+            I could now pick something up and use it in a different part of the map. Game logic! Progression! A purpose in life! Kinda!
+        </p>
+        <video autoplay muted loop width="600">
+        <source src="videos/vid4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        <h2>Adding Audio (a.k.a. Sounds So I Know I Did a Thing)</h2>
+        <p>At some point, I realised picking up keys in complete silence felt weird. Like the game wasn’t 
+            acknowledging my greatness. So I added some audio. I made a basic Clip object in Java, loaded a .wav file, 
+            and played it when the player picks something up. I also added sound for opening the door — slightly different ding, 
+            still primitive, but very satisfying. 
+            I even made the game theme audio myself, which was way more painful than it sounds.
+            But the game finally felt less like a bunch of rectangles moving around and more 
+            like something you’d let your friend try out for 30 seconds before saying “wait it’s not done yet.”
+        </p>
+        <p>Also yes, I did spend more time trying to make the right ding sound than actually implementing it. 
+        </p>
+        <video controls width="600">
+        <source src="videos/vid5.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        <h2>Winning the Game</h2>
+        <p>With keys and doors working, I added a chest. Just a simple object, 
+            sitting at the end of the map. If you reach it, the game prints a victory message. No credits, no fireworks, 
+            just a “you win” console line and the quiet satisfaction of knowing I touched a chest and Java didn’t throw a 
+            NullPointerException. A true milestone.</p>
+
+        <p>Later on, I made it more dramatic. I added a sound effect, froze the player, and added some words to the screen! 
+        It’s still basic, but honestly, it felt like closure. The game now had a beginning (spawn), a middle (key and door), 
+        and an end (chest). That’s a full game loop! Kind of!
+        </p>
+        <video controls loop width="600">
+        <source src="videos/vid6.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        <h2>Optimizing (a.k.a. Please Don't Melt My Laptop)</h2>
+        <p>Now that everything worked, I did what every dev does right after a small win: panic about performance. 
+            I scaled all my BufferedImages properly so I wasn’t stretching and blurring things every time I drew them. 
+            Turns out scaling once and reusing is slightly better than making your GPU cry every frame. Who knew?
+        </p>
+        <p>I also added diagonal movement, which sounds simple... but wasn’t. Suddenly my player could move like a normal human being — 
+            not just up, down, left, right, but diagonally. This broke collisions for a while and made me question everything I thought 
+            I understood about hitboxes. But hey, now you can walk around smoothly like you’re in a real game. Wild.</p>
+        <video controls loop width="600">
+        <source src="videos/vid7.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        <h2>What’s Next?</h2>
+        <p>I’m thinking of slowly turning this into a tiny RPG — maybe add dialogue boxes, quests, and a very emotionally unavailable NPC
+            who gives you side missions. Nothing too crazy yet, just building up the systems piece by piece.</p>
+        <p class="last-paragraph">It’s still not efficient-efficient, but it runs smooth, doesn’t crash, and feels playable. 
+            That’s enough for now.</p>
+     </main>
+</body>
+</html>
