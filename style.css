@@ -177,17 +177,17 @@ nav .right a span {
 }
 
 /* SECTION 3 - HIGHLIGHTS*/
-.highlights {
+.more {
     padding: 0 50px;
     margin-bottom: 100px;
 }
 
-.highlights h2{
+.more h2{
     text-align: center;
     font-size: 35px;
 }
 
-.highlights .text {
+.more .text {
     text-align: center;
 }
 
