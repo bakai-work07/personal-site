@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/personal-site/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css?v=10">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Portfolio</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+     <nav>
+        <div class="left">
+            <a href="index.html">Home</a>
+            <a href="blog.html">
+                <span>Personal Blog</span>
+            </a>
+        </div>
+        <div class="right">
+            <a href="https://github.com/bakai-work07" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+                <span>Github</span>
+            </a>
+            <a href="https://www.linkedin.com/in/tanbangkai/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="mailto:bangkaiwork@gmail.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        </div>
+     </nav>
+     <main class="post">
+        <h1>Breaking Down Viral YouTube Shorts</h1>
+        <p class="post-date">July 10, 2025</p>
+        <p>After completing the Google Data Analytics Certificate, I chose not to follow the standard capstone. Instead, 
+            I created my own project to apply data cleaning, analysis, and visualisation skills on a real-world dataset of 
+            top-performing YouTube Shorts. This case study explores what factors  
+            might influence a Short’s virality and viewer engagement.</p>
+        <h2>🧼 From Raw to Ready: Cleaning the Dataset</h2>
+        <p>The dataset I started with was... not great. View counts were in “K”s and “M”s like it was still 2010. 
+            Durations looked like alien code (PT59S?), and timestamps came in full ISO glory with a nice little “Z” at the end. 
+            Some rows were missing likes, some had titles in scripts I couldn’t read, and overall, it just felt chaotic.
+        </p>
+        <img src="images/capstone1/1.webp" alt="messy data">
+        <p>
+            So, I cleaned the data and scrubbed it HARD, turning the views and likes into proper numbers. I also converted all the cryptic 
+            durations into seconds, cleaned up the timestamps and pulled out useful features like day of week and weekday vs weekend. 
+            I even added columns of my own — hashtag count, like/view ratios, etc. What started out unreadable became something clean and well-structured.
+        </p>
+        <img src="images/capstone1/2.webp" alt="clean data">
+        <h2>📊 Plotting the Data: Starting with Hashtags</h2>
+        <p>Once the data was cleaned, I jumped into plotting. The first thing I wanted to explore was whether more hashtags meant more views. 
+            It’s a common belief—more hashtags equals more exposure, right?
+            So I plotted a scatterplot of hashtag count vs. view count. And... nothing. No trend, no clear line, no magical hashtag sweet spot. 
+            Some Shorts with just one hashtag pulled insane numbers, while others with five or more barely made a dent. Turns out, slapping on 
+            more hashtags isn’t the secret to going viral.
+        </p>
+        <img src="images/capstone1/3.webp" alt="rstudio">
+        <p>The takeaway? Hashtags might help with visibility, but they don’t guarantee engagement. You can’t out-hashtag bad content.
+        </p>
+        <img src="images/capstone1/4.webp" alt="scatterplot">
+        <h2>📦 Weekday vs Weekend: Does Timing Matter?</h2>
+        <p>Next, I looked at whether the day a Short was uploaded had any effect on engagement. Specifically, I compared the like-to-view ratio 
+            between weekdays and weekends using a boxplot.</p>
+        <img src="images/capstone1/7.webp" alt="rstudio">    
+        <p>The results? Slightly higher engagement on weekdays, but nothing dramatic. Both groups had similar spreads, a few outliers, and plenty of overlap. 
+            So while weekday uploads might have a tiny edge, it’s probably not enough to stress over.
+        </p>
+        <p>Moral of the story: If your content is good, it doesn’t really matter what day you post. If it’s bad, no amount of “posting at the 
+            right time” will save it.</p>
+        <img src="images/capstone1/8.webp" alt="boxplot">
+        <p>To double-check the boxplot results, I also calculated the mean and median like-to-view ratios for each group.</p>
+        <img src="images/capstone1/9.webp" alt="rstudio">
+        <p>And yep — the numbers back it up.
+
+        Weekdays: mean = 0.047, median = 0.045
+
+        Weekends: mean = 0.046, median = 0.043
+
+        The difference is tiny. Statistically real? Maybe. Practically meaningful? Probably not. Just more proof that content > timing.
+        </p>
+        <img src="images/capstone1/10.webp" alt="rstudio">
+        <h2>📅 Average Views by Day: Does the Day You Post Matter?</h2>
+        <p>To dig a little deeper into timing, I broke things down by individual day of the week. 
+            I plotted the average views for Shorts posted on each day.
+        </p>
+        <img src="images/capstone1/11.webp" alt="rstudio">
+        <p>The result? Monday absolutely crushed it. Shorts uploaded on Mondays pulled in the highest average views by a mile. Sunday and 
+            Tuesday weren’t far behind, but Thursday to Friday? Definitely the quieter end of the week.</p>
+        <p>So does the day you post actually matter? Maybe. Or maybe creators just happened to drop bangers on Mondays. Either way, 
+            if you're going to experiment with timing, Mondays might not be a bad place to start.
+        </p>
+        <h2>🧾 Final Thoughts</h2>
+        <p>This project started as a way to apply what I learned in the Google Data Analytics course, but it ended up being a lot more 
+            hands-on than I expected. I had to collect, clean, and reshape a messy dataset, make design decisions on what to measure, 
+            and figure out what the numbers actually meant.</p>
+        <p class="last-paragraph">Along the way, I learned that data rarely speaks for itself. You have to ask the right questions, 
+            test your assumptions, and be okay with answers like “it depends.” Virality is messy, and metrics like views and likes only tell 
+            part of the story. But with the right tools and some curiosity, you can still find patterns worth talking about.
+        I might try the Advanced Data Analytics cert next — or maybe build something a little bigger, now that I kind of know what I’m doing.</p>
+     </main>
+</body>
+</html>
