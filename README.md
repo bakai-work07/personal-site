@@ -16,6 +16,8 @@ It’s still a work in progress — I’ll continue refining the design, adding 
 - `blog.html` – Project showcase (blog-style)
 - `style.css` – Custom styling
 - `images/` – Assets
+- `posts/` – Pages for projects
+- `videos/` – Assets
 
 ## 📬 Contact
 Feel free to reach me at: `bangkaiwork@gmail.com`
