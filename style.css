@@ -264,17 +264,6 @@ nav .right a span {
     .skills-section .cells .cell span {
         font-size: 16px;
     }
-
-    .post ul {
-    padding-left: 18px;
-    margin: 18px 0;
-    }
-
-    .post li {
-        font-size: 14px;
-        margin-bottom: 6px;
-        line-height: 1.5;
-    }
 }
 
 @media (max-width: 600px) {
@@ -374,15 +363,10 @@ nav .right a span {
         max-height: auto;
     }
 
-    .post ul {
-    padding-left: 20px;
-    list-style-type: disc;
-    }
-
-    .post li {
-        font-size: 15px;
-        line-height: 1.6;
-        margin-bottom: 8px;
+    .post li{
+        font-size: 13px;
+        padding: 0 14px;
+        margin-top: 0;
     }
 }
 
