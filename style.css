@@ -367,6 +367,7 @@ nav .right a span {
         font-size: 13px;
         padding: 0 14px;
         margin-top: 0;
+        padding-left: 10px;
     }
 }
 
@@ -503,4 +504,9 @@ nav .right a span {
 
 .post .last-paragraph{
     margin-bottom: 50px;    
+}
+
+.post h4{
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
